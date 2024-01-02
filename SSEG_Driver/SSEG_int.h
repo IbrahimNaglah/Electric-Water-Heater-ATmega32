@@ -45,6 +45,7 @@ void SSEG_voidInit(void);
 void SSEG_voidDisplay(u8 SSEG_Num,u8 Data);
 void SSEG_Toggle();
 void SSEG_ACT();
+void SSEG_DACT();
 void Send_Num_SSEG(int value);
 
 #endif 

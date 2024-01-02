@@ -62,16 +62,24 @@ void SSEG_voidDisplay(u8 SSEG_Num,u8 Data)
 
 void SSEG_Toggle()
 {
+
 	DIO_voidTogglePin(Activate_PORT,Activate_PIN);
 }
 
 void SSEG_ACT()
 {
+
 	DIO_voidSetPinVal(Activate_PORT,Activate_PIN,DIO_U8_HIGH);
+}
+
+void SSEG_DACT()
+{
+	DIO_voidSetPinVal(Activate_PORT,Activate_PIN,DIO_U8_LOW);
 }
 
 void Send_Num_SSEG(int value)
 {
+
 	int Right_Digit,Left_Digit;
 
 	Right_Digit = ((int)value)%10;
