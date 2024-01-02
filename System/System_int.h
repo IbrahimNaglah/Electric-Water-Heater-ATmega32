@@ -10,6 +10,7 @@
 
 #include <avr/io.h>
 #include <avr/interrupt.h>
+#include <util/delay.h>
 
 #include "../Services/STD_Types.h"
 #include "../Global_interrupt_driver/GIE_int.h"
@@ -21,6 +22,7 @@
 #include "../I2C_Driver/I2C.h"
 #include "EEPROM_Settings.h"
 #include "Elements.h"
+#include "ON_Switch.h"
 
 #define Default_Mode	0
 #define SET_Mode		1
@@ -29,7 +31,8 @@ void INT0_init();
 void INT1_init();
 
 void EEPROM_init();
-void EEPROM_SendByte(u8 EEPROM_ADD,u8 Storage_Location,u8 Data);
-u8 EEPROM_ReadByte(u8 EEPROM_ADD,u8 Storage_Location);
+void EEPROM_SendByte(char EEPROM_ADD,char Storage_Location,char Data);
+u8 EEPROM_ReadByte(char EEPROM_ADD,char Storage_Location);
+
 
 #endif /* SYSTEM_SYSTEM_INT_H_ */
